@@ -51,7 +51,7 @@ def generer_lien_fedapay(montant, email):
     }
     try:
         response = requests.post(url, json=data, headers=headers)
-        if response.status_code in:
+        if response.status_code in :
             return response.json()["transaction"]["checkout_url"]
         else:
             st.error(f"Erreur FedaPay : {response.text}")
